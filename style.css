@@ -1,0 +1,173 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #55efc4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Adiciona espaçamento nas bordas */
+}
+
+/* Tela de introdução */
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #16a085;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Estilo da lista de regras */
+ul {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 30px;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: "✔";
+    color: #16a085;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Estilo do botão */
+button {
+    background-color: #2ecc71;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #27ae60;
+    transform: translateY(-3px);
+}
+
+/* Efeito de sombra para o botão */
+button:active {
+    transform: translateY(1px);
+}
+
+/* Estilo do link */
+a {
+    text-decoration: none;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    body {
+        padding: 5px; /* Reduz o espaçamento nas bordas */
+    }
+
+    .screen {
+        padding: 20px;
+        width: 90%; /* Ajusta o tamanho da tela */
+        max-width: 500px; /* Limita a largura para telas pequenas */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    p {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+    }
+
+    h2 {
+        font-size: 1.6rem; /* Ajusta o tamanho do subtítulo */
+    }
+
+    ul li {
+        font-size: 1rem; /* Ajusta o tamanho da lista */
+    }
+
+    button {
+        font-size: 1rem; /* Reduz o tamanho da fonte do botão */
+        padding: 12px 25px; /* Ajusta o tamanho do botão */
+    }
+}
+
+/* Estilos para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+    .screen {
+        padding: 15px;
+        width: 95%; /* Ajusta a largura para dispositivos ainda menores */
+        max-width: 400px; /* Limita a largura da tela */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Reduz ainda mais o título */
+    }
+
+    p {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto */
+    }
+
+    h2 {
+        font-size: 1.4rem; /* Ajusta o tamanho do subtítulo */
+    }
+
+    ul li {
+        font-size: 0.9rem; /* Ajusta o tamanho da lista */
+    }
+
+    button {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte do botão */
+        padding: 10px 20px; /* Ajusta o tamanho do botão */
+    }
+}

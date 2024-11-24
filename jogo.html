@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Cartas - Biodiversidade</title>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jogo de Cartas - Biodiversidade</h1>
+        <button id="start-button">Girar Carta</button>
+        <div id="card-area" class="card-area"></div>
+        <p id="score">Pontuação: 0</p>
+    </div>
+
+    <!-- Modal de Pergunta -->
+    <div id="question-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-btn-question">&times;</span>
+            <p id="question-text"></p>
+            <div id="alternatives"></div>
+            <p id="game-info"></p>
+        </div>
+    </div>
+
+    <!-- Modal de Conclusão -->
+    <div id="completion-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-btn-completion">&times;</span>
+            <p id="completion-message"></p>
+            <p id="score-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

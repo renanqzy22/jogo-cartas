@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0f7fa;
+    flex-direction: column;
+}
+
+.game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-area {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: #76c7c0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Habilita a transformação 3D */
+    transition: transform 0.6s; /* Duração da animação */
+}
+
+.card.flipping .card-inner {
+    transform: rotateY(180deg); /* Faz o flip */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta o lado de trás */
+    border-radius: 10px;
+}
+
+.card-front {
+    background-color: #76c7c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-back {
+    background-color: #00796b;
+    transform: rotateY(180deg); /* O lado de trás começa invertido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+#roll-button {
+    background-color: #f39c12;
+}
+
+#roll-button:hover {
+    background-color: #e67e22;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    opacity: 0.95;
+}
+
+#score {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+#alternatives button {
+    margin: 10px 0; /* Espaçamento vertical */
+    padding: 12px 20px; /* Espaçamento interno */
+    background-color: #76c7c0; /* Cor de fundo */
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Suavidade ao interagir */
+    display: block; /* Ocupa toda a largura disponível */
+    text-align: center;
+}
+
+#alternatives button:hover {
+    background-color: #004d40; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+
+#alternatives {
+    display: flex;
+    flex-direction: column; /* Organiza as alternativas em colunas */
+    align-items: center; /* Centraliza os botões */
+    gap: 15px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaçamento acima */
+}
+
+
